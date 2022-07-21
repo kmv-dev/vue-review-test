@@ -1,18 +1,10 @@
-import api from '../../api/products.js';
-import Vue from 'vue';
-import Vuex from 'vuex';
-Vue.use(Vuex);
+import { createStore } from "vuex";
+import main from "./main/index.js";
 
-export default new Vuex.Store({ //TODO разбить стор на модули типа user, admin, auth
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-    getProductsList(ctx, data) { // TODO удалить аргументы которые не принимает функция
-      return api.getProductsList();
-    },
-  },
+const store = createStore({
   modules: {
-  }
-})
+    main,
+  },
+});
+
+export default store;
