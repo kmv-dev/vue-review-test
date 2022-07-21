@@ -1,5 +1,5 @@
 <template>
-  <div class="product-list"> <!-- TODO card нужно вынести в отдельный компонент, классы по БЭМ card__title card__image -->
+  <div class="product-list"> <!-- TODO классы по БЭМ card__title card__image -->
     <div class="card" v-for="product in products" :style="{width: cardsWidth + '%'}"> <!-- TODO писать инлайн стили плохо. Это все лишнее ниже оставил коммент в методе cardWidth -->
       <p class="card-title">{{ product.title }}</p>
       <img class="card-image" :src="product.image" alt="">
