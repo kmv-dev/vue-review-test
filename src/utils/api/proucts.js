@@ -1,4 +1,4 @@
-export const addProducts = (localStorageKey, payload) => {
+export const addProductsToLocalStorage = (localStorageKey, payload) => {
     const newValue = JSON.stringify(payload);
     localStorage.setItem(localStorageKey, newValue);
 }

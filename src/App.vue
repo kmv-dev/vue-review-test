@@ -10,7 +10,7 @@
 import TheHeader from './components/TheHeader';
 import ProductList from './components/ProductList';
 import TheCart from './components/TheCart';
-import { addProducts } from './utils/api/proucts'
+import { addProductsToLocalStorage } from './utils/api/proucts'
 import '@/assets/scss/main.scss'
 
 export default {
@@ -52,12 +52,8 @@ export default {
   },
   methods: {
     addProductList() {
-      addProducts('productsList', this.products)
+      addProductsToLocalStorage('productsList', this.products)
     },
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>

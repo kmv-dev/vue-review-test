@@ -53,6 +53,7 @@ export default {
     updateProducts() {
       setInterval(() => {
         this.getProducts();
+        console.log('Выполнили обновление списка продуктов');
       }, 2000)
     },
     addToCart(item, index) {
